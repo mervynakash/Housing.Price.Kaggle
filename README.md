@@ -55,7 +55,7 @@ Here's a brief version of what you'll find in the data description file.
 - HeatingQC: Heating quality and condition
 - CentralAir: Central air conditioning
 - Electrical: Electrical system
-- - 1stFlrSF: First Floor square feet
+- 1stFlrSF: First Floor square feet
 - 2ndFlrSF: Second floor square feet
 - LowQualFinSF: Low quality finished square feet (all floors)
 - GrLivArea: Above grade (ground) living area square feet
@@ -113,7 +113,7 @@ Then I saved the datasets in this file in the .RData format.
 - Linear Regression
 
 
-# Accuracy in each model
+# Error Rate in each model
 - Decision Tree = 0.19816
 - Random Forest = 0.25028
 - KNN = 0.20844
