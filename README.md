@@ -119,6 +119,7 @@ Then I saved the datasets in this file in the .RData format.
 - KNN = 0.20844
 - MARSpline Forward Pruning = 0.24304
 - MARSpline Backward Pruning = 0.24304
+- MARSpline Cross Validation = 0.21918
 - Lasso Reguralization = 0.16595
 - Ridge Reguralization = 0.16610
 - Elastic Net = 0.16097
