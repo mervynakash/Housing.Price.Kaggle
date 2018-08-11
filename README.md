@@ -131,6 +131,6 @@ Then the datasets in this file were saved in a .RData format for future use.
 After PDM + Boruta:
 - MARSpline Forward Pruning - 0.15351
 
-# Current Rank = 2840
+# Current Rank = 2649 (after PDM + Boruta introduction)
 Edit: 
-New Rank = 2649 (after PDM + Boruta intriduction)
+Previous Rank = 2840 
