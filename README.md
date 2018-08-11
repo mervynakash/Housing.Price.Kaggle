@@ -99,6 +99,9 @@ The Dataset has 76 columns and Missing Values in some of the columns. With the h
 Since there are many predictors I used PCA to subset the predictors which are showing more variance in the target variable.
 Then I saved the datasets in this file in the .RData format.
 
+# HouseEDA.R
+For imputing the missing values in the columns I took the help of PDM Package (https://github.com/mervynakash/PDM) which I developed. Boruta Package was used for feature selection. 
+Then the datasets in this file were saved in a .RData format for future use.
 
 # Algorithms Used
 - Decision Tree
@@ -125,4 +128,9 @@ Then I saved the datasets in this file in the .RData format.
 - Elastic Net = 0.16097
 - Linear Regression = 0.61181
 
+After PDM + Boruta:
+- MARSpline Forward Pruning - 0.15351
+
 # Current Rank = 2840
+Edit: 
+New Rank = 2649 (after PDM + Boruta intriduction)
