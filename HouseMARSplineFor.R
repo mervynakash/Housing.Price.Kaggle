@@ -5,12 +5,17 @@ setwd("E:/Kaggle/Housing Price/")
 load("HouseEDA_data.RData")
 
 library(earth)
+library(dplyr)
 
-modelmars <- earth(SalePrice~., data = housetrain, pmethod = "forward", trace = 2)
+housetrain$logSalePrice <- log10(housetrain$SalePrice)
+
+modelmars <- earth(logSalePrice~., data = housetrain %>% select(-SalePrice), pmethod = "forward", trace = 2)
 
 marsforpred <- as.vector(predict(modelmars, housetest))
 
-marsfor_df <- data.frame(ID = test$Id, SalePrice = marsforpred)
+marsforpred_new <- 10^marsforpred
+
+marsfor_df <- data.frame(ID = test$Id, SalePrice = marsforpred_new)
 
 # write.csv(marsfor_df, file = "MARSpline-Forward.csv", row.names = F)
 

@@ -1,14 +1,21 @@
 set.seed(123)
 setwd("E:/Kaggle/Housing Price/")
 
-load("HousingClean.RData")
+load("HouseEDA_data.RData")
+# load("HousingClean.RData")
 
 library(earth)
+library(dplyr)
 
-modelmars <- earth(SalePrice~., data = housetrain, pmethod = "backward", trace = 2)
+housetrain$logSalePrice <- log10(housetrain$SalePrice)
+
+modelmars <- earth(logSalePrice~., data = housetrain %>% select(-SalePrice), pmethod = "backward", trace = 2)
 
 marsbackpred <- as.vector(predict(modelmars, housetest))
 
-marsback_df <- data.frame(ID = test$Id, SalePrice = marsbackpred)
+marsbackpred_new <- 10^marsbackpred
 
-write.csv(marsback_df, file = "MARSpline-Backward.csv", row.names = F)
+marsback_df <- data.frame(ID = test$Id, SalePrice = marsbackpred_new)
+
+# write.csv(marsback_df, file = "MARSpline-Backward.csv", row.names = F)
+write.csv(marsback_df, file = "MARSpline-Backward_PDM.csv", row.names = F)
