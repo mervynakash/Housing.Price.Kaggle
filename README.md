@@ -131,6 +131,14 @@ Then the datasets in this file were saved in a .RData format for future use.
 After PDM + Boruta:
 - MARSpline Forward Pruning - 0.15351
 
-# Current Rank = 2649 (after PDM + Boruta introduction)
+After Feature Engineering and PDM + Boruta:
+- MARSpline Forward Pruning - 0.13389
+- MARSpline Backward Pruning - 0.13411
+- Lasso Reguralization - 0.13315
+- Ridge Reguralization - 0.13877
+- Elastic Net - 0.13357
+
+# Current Rank = 1673 (after Feature Engineering and PDM + Boruta)
 Edit: 
+Previous Rank = 2649 (after PDM + Boruta introduction)
 Previous Rank = 2840 
