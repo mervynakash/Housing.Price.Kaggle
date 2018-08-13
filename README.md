@@ -132,13 +132,13 @@ After PDM + Boruta:
 - MARSpline Forward Pruning - 0.15351
 
 After Feature Engineering and PDM + Boruta:
-- MARSpline Forward Pruning - 0.13389
-- MARSpline Backward Pruning - 0.13411
-- Lasso Reguralization - 0.13315
-- Ridge Reguralization - 0.13877
-- Elastic Net - 0.13357
+- MARSpline Forward Pruning - 0.13294
+- MARSpline Backward Pruning - 0.13132
+- Lasso Reguralization - 0.13132
+- Ridge Reguralization - 0.13086
+- Elastic Net - 0.12934
 
-# Current Rank = 1673 (after Feature Engineering and PDM + Boruta)
+# Current Rank = 1467 (after Feature Engineering and PDM + Boruta)
 Edit: 
 Previous Rank = 2649 (after PDM + Boruta introduction)
 Previous Rank = 2840 
